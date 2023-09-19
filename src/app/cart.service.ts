@@ -8,7 +8,9 @@ import { Injectable } from '@angular/core';
 export class CartService {
 
   items: Product[] = [];
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
   addToCart(product: Product) {
     this.items.push(product);
   }
